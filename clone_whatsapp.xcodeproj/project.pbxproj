@@ -13,6 +13,12 @@
 		881FF9732C14D47000056880 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 881FF9722C14D47000056880 /* Base */; };
 		881FF9752C14D47200056880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 881FF9742C14D47200056880 /* Assets.xcassets */; };
 		881FF9782C14D47200056880 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 881FF9772C14D47200056880 /* Base */; };
+		881FF9802C14D67E00056880 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF97F2C14D67E00056880 /* CustomTableViewCell.swift */; };
+		881FF9822C14D6AA00056880 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF9812C14D6AA00056880 /* AddViewController.swift */; };
+		881FF9842C14D6DB00056880 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF9832C14D6DB00056880 /* Info.swift */; };
+		881FF9862C14D70F00056880 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF9852C14D70F00056880 /* DisplayViewController.swift */; };
+		881FF9882C14D74A00056880 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF9872C14D74A00056880 /* SearchViewController.swift */; };
+		881FF98A2C14D77100056880 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF9892C14D77100056880 /* EditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		881FF9742C14D47200056880 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		881FF9772C14D47200056880 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		881FF9792C14D47200056880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		881FF97F2C14D67E00056880 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		881FF9812C14D6AA00056880 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		881FF9832C14D6DB00056880 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		881FF9852C14D70F00056880 /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
+		881FF9872C14D74A00056880 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		881FF9892C14D77100056880 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +71,12 @@
 				881FF96B2C14D47000056880 /* AppDelegate.swift */,
 				881FF96D2C14D47000056880 /* SceneDelegate.swift */,
 				881FF96F2C14D47000056880 /* ViewController.swift */,
+				881FF9852C14D70F00056880 /* DisplayViewController.swift */,
+				881FF9892C14D77100056880 /* EditViewController.swift */,
+				881FF9872C14D74A00056880 /* SearchViewController.swift */,
+				881FF9832C14D6DB00056880 /* Info.swift */,
+				881FF9812C14D6AA00056880 /* AddViewController.swift */,
+				881FF97F2C14D67E00056880 /* CustomTableViewCell.swift */,
 				881FF9712C14D47000056880 /* Main.storyboard */,
 				881FF9742C14D47200056880 /* Assets.xcassets */,
 				881FF9762C14D47200056880 /* LaunchScreen.storyboard */,
@@ -138,9 +156,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				881FF9822C14D6AA00056880 /* AddViewController.swift in Sources */,
+				881FF9862C14D70F00056880 /* DisplayViewController.swift in Sources */,
+				881FF9882C14D74A00056880 /* SearchViewController.swift in Sources */,
 				881FF9702C14D47000056880 /* ViewController.swift in Sources */,
 				881FF96C2C14D47000056880 /* AppDelegate.swift in Sources */,
+				881FF9842C14D6DB00056880 /* Info.swift in Sources */,
+				881FF9802C14D67E00056880 /* CustomTableViewCell.swift in Sources */,
 				881FF96E2C14D47000056880 /* SceneDelegate.swift in Sources */,
+				881FF98A2C14D77100056880 /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
