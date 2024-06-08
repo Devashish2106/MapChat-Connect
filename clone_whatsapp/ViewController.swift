@@ -13,7 +13,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     Info(name: "Dev", add: "Jaipur", age: "20"),
     Info(name: "Modi", add: "Delhi", age: "71"),
     Info(name: "Amitabh", add: "Mumbai", age: "75"),
-    Info(name: "Hritik", add: "Pune", age: "50")
     ]
     
     
