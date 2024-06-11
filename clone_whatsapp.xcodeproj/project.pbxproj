@@ -19,6 +19,7 @@
 		881FF9862C14D70F00056880 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF9852C14D70F00056880 /* DisplayViewController.swift */; };
 		881FF9882C14D74A00056880 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF9872C14D74A00056880 /* SearchViewController.swift */; };
 		881FF98A2C14D77100056880 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF9892C14D77100056880 /* EditViewController.swift */; };
+		881FF98C2C1786B000056880 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF98B2C1786B000056880 /* SearchCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		881FF9852C14D70F00056880 /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		881FF9872C14D74A00056880 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		881FF9892C14D77100056880 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		881FF98B2C1786B000056880 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				881FF9852C14D70F00056880 /* DisplayViewController.swift */,
 				881FF9892C14D77100056880 /* EditViewController.swift */,
 				881FF9872C14D74A00056880 /* SearchViewController.swift */,
+				881FF98B2C1786B000056880 /* SearchCollectionViewCell.swift */,
 				881FF9832C14D6DB00056880 /* Info.swift */,
 				881FF9812C14D6AA00056880 /* AddViewController.swift */,
 				881FF97F2C14D67E00056880 /* CustomTableViewCell.swift */,
@@ -160,6 +163,7 @@
 				881FF9862C14D70F00056880 /* DisplayViewController.swift in Sources */,
 				881FF9882C14D74A00056880 /* SearchViewController.swift in Sources */,
 				881FF9702C14D47000056880 /* ViewController.swift in Sources */,
+				881FF98C2C1786B000056880 /* SearchCollectionViewCell.swift in Sources */,
 				881FF96C2C14D47000056880 /* AppDelegate.swift in Sources */,
 				881FF9842C14D6DB00056880 /* Info.swift in Sources */,
 				881FF9802C14D67E00056880 /* CustomTableViewCell.swift in Sources */,
