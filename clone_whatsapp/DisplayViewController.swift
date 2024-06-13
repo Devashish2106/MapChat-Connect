@@ -13,7 +13,7 @@ protocol DisplayViewControllerDelegate: AnyObject {
 
 class DisplayViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var a = Info(name: "a", add: "a", age: "0")
+    var a = Info(name: "a", add: "a", age: "0", image: nil)
     
     weak var delegate: DisplayViewControllerDelegate?
 
@@ -31,25 +31,7 @@ class DisplayViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-
         
-//        InsideAge.text = a.age
-//        InsideName.text = a.name
-//        InsideCity.text = a.add
-//
-//        if (!a.img){
-//            InsideImage.image = UIImage(named: a.name)
-//        } else {
-//            if let savedImagePath = UserDefaults.standard.string(forKey: userDefalutsKey){
-//                if let savedImage = UIImage(contentsOfFile: savedImagePath){
-//                    InsideImage.image = savedImage
-//                } else {
-//                    InsideImage.image = UIImage(named: a.name)
-//                }
-//            } else {
-//                InsideImage.image = UIImage(named: a.name)
-//            }
-//        }
         updateUI()
         
         
@@ -60,19 +42,7 @@ class DisplayViewController: UIViewController, UIImagePickerControllerDelegate, 
         InsideName.text = a.name
         InsideCity.text = a.add
         
-        if (!a.img){
-            InsideImage.image = UIImage(named: a.name)
-        } else {
-            if let savedImagePath = UserDefaults.standard.string(forKey: userDefalutsKey){
-                if let savedImage = UIImage(contentsOfFile: savedImagePath){
-                    InsideImage.image = savedImage
-                } else {
-                    InsideImage.image = UIImage(named: a.name)
-                }
-            } else {
-                InsideImage.image = UIImage(named: a.name)
-            }
-        }
+        InsideImage.image = a.image ?? UIImage(named: a.name)
     }
     
     @IBSegueAction func EditVCSegue(_ coder: NSCoder) -> EditViewController? {
@@ -103,7 +73,7 @@ class DisplayViewController: UIViewController, UIImagePickerControllerDelegate, 
         if let image = info[.originalImage] as? UIImage {
             InsideImage.image = image
             saveImage(image)
-            a = a.imgCh()
+            a = a.imgCh(image)
             print(a)
         }
     }
@@ -147,7 +117,7 @@ extension DisplayViewController: SearchViewControllerDelegate{
     func editSC(_ vc: SearchViewController, search: UIImage) {
         InsideImage.image = search
         saveImage(search)
-        a = a.imgCh()
+        a = a.imgCh(search)
         dismiss(animated: true, completion: nil)
     }
 }

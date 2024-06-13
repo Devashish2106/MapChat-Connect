@@ -14,13 +14,13 @@ struct Info {
     let add: String
     let age: String
     var img: Bool = false
+    var image: UIImage?
     
-    func sendt (a: inout Info) -> Info{
+    func sendt(a: inout Info) -> Info {
         return a
     }
-    
-    func imgCh() -> Info {
-        return Info(name: name, add: add, age: age, img: true)
+    func imgCh(_ newImage: UIImage) -> Info {
+        return Info(name: name, add: add, age: age, img: true, image: newImage)
     }
 }
 

@@ -35,9 +35,8 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func saveBt(_ sender: Any) {
-        let infd = Info(name: editName.text!, add: editAdd.text!, age: editAge.text!)
-        delegate?.EditVC(self, didSave: infd)
-        
+        let updatedInfo = Info(name: editName.text!, add: editAdd.text!, age: editAge.text!, img: inf?.img ?? false, image: inf?.image)
+        delegate?.EditVC(self, didSave: updatedInfo)
     }
     
     

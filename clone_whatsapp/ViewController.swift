@@ -79,8 +79,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! CustomTableViewCell
         
-        cell.pName.text = infos[indexPath.row].name
-        cell.pImage.image = UIImage(named: infos[indexPath.row].name)
+        let info = infos[indexPath.row]
+        cell.pName.text = info.name
+        cell.pImage.image = info.image ?? UIImage(named: info.name)
         
         cell.pImage.layer.cornerRadius = cell.pImage.frame.height / 2
         
