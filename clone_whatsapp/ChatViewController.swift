@@ -29,8 +29,11 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         chatCon.delegate = self
         
+        chatCon.placeholder = "Enter your message"
+        
         tableView.separatorStyle = .none
         tableView.backgroundView = UIImageView(image: UIImage(named: "bgimage.jpg"))
+        tableView.rowHeight = UITableView.automaticDimension
         
         // Do any additional setup after loading the view.
         updateUI()
