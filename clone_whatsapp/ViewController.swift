@@ -36,19 +36,36 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-    @IBSegueAction func dspvc(_ coder: NSCoder) -> DisplayViewController? {
-        let vc =  DisplayViewController(coder: coder)
+//    @IBSegueAction func dspvc(_ coder: NSCoder) -> DisplayViewController? {
+//        let vc =  DisplayViewController(coder: coder)
+//        
+//        if let indexpath = tableView.indexPathForSelectedRow{
+//            let inf = infos[indexpath.row]
+//            print(inf)
+//            vc?.a = inf
+//        }
+//        
+//        vc?.delegate = self
+//        
+//        vc?.modalPresentationStyle = .fullScreen
+//        
+//        
+//        return vc
+//    }
+    
+    
+    @IBSegueAction func dspCVC(_ coder: NSCoder) -> ChatViewController? {
+        let vc = ChatViewController(coder: coder)
         
         if let indexpath = tableView.indexPathForSelectedRow{
             let inf = infos[indexpath.row]
             print(inf)
-            vc?.a = inf
+            vc?.info = inf
         }
         
         vc?.delegate = self
         
         vc?.modalPresentationStyle = .fullScreen
-        
         
         return vc
     }
@@ -68,7 +85,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 91
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -106,11 +123,22 @@ extension ViewController: AddViewControllerDelegate{
 }
 
 
-extension ViewController: DisplayViewControllerDelegate {
-    func displayVC(_ vc: DisplayViewController, didSave: Info) {
-        
+//extension ViewController: DisplayViewControllerDelegate {
+//    func displayVC(_ vc: DisplayViewController, didSave: Info) {
+//        
+//        if let index = tableView.indexPathForSelectedRow{
+//            infos[index.row] = didSave
+//            tableView.reloadRows(at: [index], with: .none)
+//        }
+//        
+//        dismiss(animated: true, completion: nil)
+//    }
+//}
+
+extension ViewController: ChatViewControllerDelegate {
+    func displayVC(_ vc: ChatViewController, updatedInfo: Info) {
         if let index = tableView.indexPathForSelectedRow{
-            infos[index.row] = didSave
+            infos[index.row] = updatedInfo
             tableView.reloadRows(at: [index], with: .none)
         }
         
