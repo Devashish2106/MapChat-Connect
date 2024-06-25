@@ -11,7 +11,7 @@ protocol ChatViewControllerDelegate: AnyObject {
     func displayVC(_ vc: ChatViewController, updatedInfo : Info)
 }
 
-class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     var info : Info?
     weak var delegate : ChatViewControllerDelegate?
@@ -60,6 +60,25 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         delegate?.displayVC(self, updatedInfo: info!)
     }
     
+    @IBAction func selectImg(_ sender: Any) {
+        let imagePickerVC = UIImagePickerController()
+        imagePickerVC.sourceType = .photoLibrary
+        imagePickerVC.delegate = self
+        present(imagePickerVC, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        
+        if let image = info[.originalImage] as? UIImage{
+            let side: MessageSide = selectorLR.isOn ? .rightImage : .leftImage
+            let mess = Message(text: "", side: side, img: true, loc: image)
+            messages.append(mess)
+            
+            tableView.reloadData()
+        }
+    }
+    
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         return true
     }
@@ -84,11 +103,26 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         if message.side == .left {
             let cell = tableView.dequeueReusableCell(withIdentifier: "LeftViewCell") as! LeftViewCell
             cell.configureCell(message: message)
+            tableView.rowHeight = UITableView.automaticDimension
+            return cell
+        }
+        else if message.side == .right {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "RightViewCell") as! RightViewCell
+            cell.configureCell(message: message)
+            tableView.rowHeight = UITableView.automaticDimension
+            return cell
+        }
+        else if message.side == .leftImage {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LeftImageViewCell") as! LeftImageViewCell
+            
+            cell.configure(image: message.loc)
+            tableView.rowHeight = 120
             return cell
         }
         else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "RightViewCell") as! RightViewCell
-            cell.configureCell(message: message)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "RightImageViewCell") as! RightImageViewCell
+            cell.configure(image: message.loc)
+            tableView.rowHeight = 120
             return cell
         }
     }

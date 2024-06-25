@@ -467,9 +467,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gci-5w-5d5">
-                                <rect key="frame" x="0.0" y="111" width="393" height="665"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gci-5w-5d5">
+                                <rect key="frame" x="0.0" y="52" width="393" height="724"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RightViewCell" rowHeight="52" id="xGQ-UB-Fd5" customClass="RightViewCell" customModule="clone_whatsapp" customModuleProvider="target">
@@ -550,17 +549,88 @@
                                             <outlet property="textMessageLabel" destination="3Lt-JM-MuE" id="g8Q-qP-cHW"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RightImageViewCell" rowHeight="120" id="JRe-0K-8dp" customClass="RightImageViewCell" customModule="clone_whatsapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="154" width="393" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JRe-0K-8dp" id="OcT-KH-kRa">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cf8-y0-1kn">
+                                                    <rect key="frame" x="248" y="0.0" width="125" height="100"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Amitabh" translatesAutoresizingMaskIntoConstraints="NO" id="CW1-n7-czt">
+                                                            <rect key="frame" x="12" y="10" width="100" height="100"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="Mso-6V-J3F"/>
+                                                                <constraint firstAttribute="height" constant="100" id="Y1h-57-dLa"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="125" id="DZZ-4B-a9x"/>
+                                                        <constraint firstItem="CW1-n7-czt" firstAttribute="centerY" secondItem="Cf8-y0-1kn" secondAttribute="centerY" constant="10" id="Vzx-rv-XXL"/>
+                                                        <constraint firstAttribute="height" constant="100" id="l47-DF-kRw"/>
+                                                        <constraint firstItem="CW1-n7-czt" firstAttribute="trailing" secondItem="Cf8-y0-1kn" secondAttribute="trailingMargin" constant="-5" id="nZV-dP-aaD"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Cf8-y0-1kn" firstAttribute="centerY" secondItem="OcT-KH-kRa" secondAttribute="centerY" constant="-10" id="BfI-07-FhK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Cf8-y0-1kn" secondAttribute="trailing" id="D6g-HU-rqv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="customContentView" destination="Cf8-y0-1kn" id="IRa-BL-MeV"/>
+                                            <outlet property="messageImg" destination="CW1-n7-czt" id="pDS-Na-4BR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LeftImageViewCell" rowHeight="120" id="bmM-Xi-iac" customClass="LeftImageViewCell" customModule="clone_whatsapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="274" width="393" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bmM-Xi-iac" id="Ryu-fE-pft">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfR-dB-134">
+                                                    <rect key="frame" x="20" y="0.0" width="125" height="100"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Amitabh" translatesAutoresizingMaskIntoConstraints="NO" id="8sy-nC-loC">
+                                                            <rect key="frame" x="12" y="10" width="100" height="100"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="Zh6-pJ-AGf"/>
+                                                                <constraint firstAttribute="height" constant="100" id="sQX-gP-dEE"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="3Np-6F-SeU"/>
+                                                        <constraint firstAttribute="width" constant="125" id="NT5-6h-aKZ"/>
+                                                        <constraint firstItem="8sy-nC-loC" firstAttribute="leading" secondItem="lfR-dB-134" secondAttribute="leading" constant="12" id="ntd-dk-icA"/>
+                                                        <constraint firstItem="8sy-nC-loC" firstAttribute="centerY" secondItem="lfR-dB-134" secondAttribute="centerY" constant="10" id="sgz-vN-a8g"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lfR-dB-134" secondAttribute="trailing" constant="228" id="8Hw-LJ-0um"/>
+                                                <constraint firstItem="lfR-dB-134" firstAttribute="centerY" secondItem="Ryu-fE-pft" secondAttribute="centerY" constant="-10" id="dfv-Aq-BQ6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="customContentView" destination="lfR-dB-134" id="3v5-43-PZb"/>
+                                            <outlet property="msgImage" destination="8sy-nC-loC" id="aQ2-jt-gTM"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wEa-aX-Kd8">
-                                <rect key="frame" x="16" y="784" width="319" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wEa-aX-Kd8">
+                                <rect key="frame" x="47" y="784" width="288" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HeM-WF-z7w">
-                                <rect key="frame" x="343" y="786" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HeM-WF-z7w">
+                                <rect key="frame" x="343" y="784" width="51" height="33"/>
                             </switch>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1u-sk-LpI">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
@@ -635,12 +705,37 @@
                                     <constraint firstItem="CDy-KO-KeL" firstAttribute="top" secondItem="h1u-sk-LpI" secondAttribute="top" constant="2" id="xAb-GI-TB9"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clM-Od-xPo">
+                                <rect key="frame" x="0.0" y="784" width="54.666666666666664" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="mQ6-cf-SO4"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="photo" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="selectImg:" destination="ld7-dV-8vL" eventType="touchUpInside" id="biM-Yz-Bb5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="C4T-o4-azy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="HeM-WF-z7w" firstAttribute="leading" secondItem="wEa-aX-Kd8" secondAttribute="trailing" constant="8" symbolic="YES" id="Fd7-bk-BUR"/>
+                            <constraint firstItem="C4T-o4-azy" firstAttribute="bottom" secondItem="clM-Od-xPo" secondAttribute="bottom" constant="25" id="GUX-fc-CiB"/>
+                            <constraint firstItem="gci-5w-5d5" firstAttribute="trailing" secondItem="h1u-sk-LpI" secondAttribute="trailing" id="I03-5l-KDM"/>
+                            <constraint firstItem="clM-Od-xPo" firstAttribute="top" secondItem="gci-5w-5d5" secondAttribute="bottom" constant="8" symbolic="YES" id="KFo-qL-ZkF"/>
                             <constraint firstItem="h1u-sk-LpI" firstAttribute="top" secondItem="C4T-o4-azy" secondAttribute="top" id="RWa-hQ-LmU"/>
+                            <constraint firstItem="clM-Od-xPo" firstAttribute="leading" secondItem="gci-5w-5d5" secondAttribute="leading" id="adW-Tj-M7a"/>
+                            <constraint firstItem="HeM-WF-z7w" firstAttribute="centerY" secondItem="wEa-aX-Kd8" secondAttribute="centerY" id="atl-XJ-Ukf"/>
+                            <constraint firstItem="clM-Od-xPo" firstAttribute="top" secondItem="gci-5w-5d5" secondAttribute="bottom" constant="8" id="b81-I2-Jqa"/>
+                            <constraint firstItem="gci-5w-5d5" firstAttribute="top" secondItem="h1u-sk-LpI" secondAttribute="bottom" constant="8" id="bBU-dc-ACy"/>
+                            <constraint firstItem="clM-Od-xPo" firstAttribute="leading" secondItem="h1u-sk-LpI" secondAttribute="leading" id="bpb-8t-Gf1"/>
+                            <constraint firstItem="clM-Od-xPo" firstAttribute="centerY" secondItem="wEa-aX-Kd8" secondAttribute="centerY" id="cGg-tl-cdn"/>
                             <constraint firstItem="h1u-sk-LpI" firstAttribute="leading" secondItem="C4T-o4-azy" secondAttribute="leading" id="k5W-ll-yHn"/>
+                            <constraint firstItem="clM-Od-xPo" firstAttribute="bottom" secondItem="HeM-WF-z7w" secondAttribute="bottom" id="oFb-RT-e9q"/>
+                            <constraint firstItem="clM-Od-xPo" firstAttribute="top" secondItem="wEa-aX-Kd8" secondAttribute="top" id="syD-AN-OOm"/>
+                            <constraint firstItem="C4T-o4-azy" firstAttribute="trailing" secondItem="HeM-WF-z7w" secondAttribute="trailing" constant="1" id="v5E-EG-N2B"/>
+                            <constraint firstItem="wEa-aX-Kd8" firstAttribute="leading" secondItem="clM-Od-xPo" secondAttribute="trailing" constant="-7.6666666666666643" id="xbV-YE-s70"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hE5-Gc-6q8"/>
@@ -668,6 +763,7 @@
         <image name="camera.circle.fill" catalog="system" width="128" height="123"/>
         <image name="ellipsis.circle.fill" catalog="system" width="128" height="123"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
         <image name="square.and.arrow.down" catalog="system" width="112" height="128"/>
