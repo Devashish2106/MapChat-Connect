@@ -43,6 +43,7 @@ class DisplayViewController: UIViewController, UIImagePickerControllerDelegate, 
         InsideCity.text = a.add
         
         InsideImage.image = a.image ?? UIImage(named: a.name)
+        InsideImage.layer.cornerRadius = 12
     }
     
     @IBSegueAction func EditVCSegue(_ coder: NSCoder) -> EditViewController? {
