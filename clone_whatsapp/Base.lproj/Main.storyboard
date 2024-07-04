@@ -19,14 +19,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jka-SE-zBe">
-                                <rect key="frame" x="337.33333333333331" y="79" width="49.666666666666686" height="40"/>
+                                <rect key="frame" x="335.66666666666669" y="79" width="51.333333333333314" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ric-WY-E8i"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="">
-                                    <imageReference key="image" image="camera.circle.fill" catalog="system" symbolScale="large"/>
+                                    <imageReference key="image" image="map" catalog="system" symbolScale="large"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="HkU-TG-ruU" kind="show" id="fgV-H6-Q1M"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gD-Co-G2v">
                                 <rect key="frame" x="6" y="79" width="40" height="40"/>
@@ -149,6 +152,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Yi-TF-Fpe" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1750.3816793893129" y="-27.464788732394368"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="d5x-GL-XdC">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="HkU-TG-ruU" customClass="MapViewController" customModule="clone_whatsapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oSo-X3-2XK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r2r-tg-GQ0" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="97" width="393" height="735"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACV-fh-gwf">
+                                <rect key="frame" x="0.0" y="20" width="51" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="yJE-XZ-L0w"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.backward" catalog="system"/>
+                                <connections>
+                                    <action selector="backBtn:" destination="HkU-TG-ruU" eventType="touchUpInside" id="qOr-HU-arc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iQ9-LB-617"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iQ9-LB-617" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ACV-fh-gwf" secondAttribute="trailing" symbolic="YES" id="Lva-4A-CJP"/>
+                            <constraint firstItem="ACV-fh-gwf" firstAttribute="leading" secondItem="iQ9-LB-617" secondAttribute="leading" id="UUb-ud-G49"/>
+                            <constraint firstItem="ACV-fh-gwf" firstAttribute="top" secondItem="iQ9-LB-617" secondAttribute="top" constant="20" id="jFc-0U-TsL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="b6k-P2-XyB"/>
+                    <connections>
+                        <outlet property="mapView" destination="r2r-tg-GQ0" id="bhj-FN-cCr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LIh-7X-MOh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1750.3816793893129" y="-713.38028169014092"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="KJH-KZ-7l7">
@@ -759,10 +803,11 @@
         <image name="Amitabh" width="718" height="801"/>
         <image name="Dev" width="576" height="576"/>
         <image name="arrow.left" catalog="system" width="128" height="95"/>
+        <image name="arrowshape.backward" catalog="system" width="128" height="104"/>
         <image name="arrowshape.left" catalog="system" width="128" height="104"/>
-        <image name="camera.circle.fill" catalog="system" width="128" height="123"/>
         <image name="ellipsis.circle.fill" catalog="system" width="128" height="123"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>
+        <image name="map" catalog="system" width="128" height="112"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="123"/>

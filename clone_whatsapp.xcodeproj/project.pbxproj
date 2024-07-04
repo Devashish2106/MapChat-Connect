@@ -21,10 +21,12 @@
 		881FF98A2C14D77100056880 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF9892C14D77100056880 /* EditViewController.swift */; };
 		881FF98C2C1786B000056880 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF98B2C1786B000056880 /* SearchCollectionViewCell.swift */; };
 		883C83A32C219A7900AB1F19 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883C83A22C219A7900AB1F19 /* Message.swift */; };
+		8845B0962C35C0D7004C3F73 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8845B0952C35C0D7004C3F73 /* MapViewController.swift */; };
 		885353F02C2054B400B8647B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885353EF2C2054B400B8647B /* ChatViewController.swift */; };
 		889ED5172C29EA2100DB9B73 /* RightImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889ED5162C29EA2100DB9B73 /* RightImageViewCell.swift */; };
 		88CF6ECD2C20AB6A0004FC57 /* RightViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CF6ECC2C20AB6A0004FC57 /* RightViewCell.swift */; };
 		88CF6ECF2C20AB8B0004FC57 /* LeftViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CF6ECE2C20AB8B0004FC57 /* LeftViewCell.swift */; };
+		88D75EBB2C35BF0000373A08 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 88D75EBA2C35BF0000373A08 /* GoogleMaps */; };
 		88D885582C2AE9AA0099A5E9 /* LeftImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D885572C2AE9AA0099A5E9 /* LeftImageViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,7 @@
 		881FF9892C14D77100056880 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		881FF98B2C1786B000056880 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		883C83A22C219A7900AB1F19 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		8845B0952C35C0D7004C3F73 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		885353EF2C2054B400B8647B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		889ED5162C29EA2100DB9B73 /* RightImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightImageViewCell.swift; sourceTree = "<group>"; };
 		88CF6ECC2C20AB6A0004FC57 /* RightViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightViewCell.swift; sourceTree = "<group>"; };
@@ -57,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88D75EBB2C35BF0000373A08 /* GoogleMaps in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +98,7 @@
 				881FF9812C14D6AA00056880 /* AddViewController.swift */,
 				881FF97F2C14D67E00056880 /* CustomTableViewCell.swift */,
 				881FF9712C14D47000056880 /* Main.storyboard */,
+				8845B0952C35C0D7004C3F73 /* MapViewController.swift */,
 				88D885572C2AE9AA0099A5E9 /* LeftImageViewCell.swift */,
 				889ED5162C29EA2100DB9B73 /* RightImageViewCell.swift */,
 				88CF6ECC2C20AB6A0004FC57 /* RightViewCell.swift */,
@@ -122,6 +127,9 @@
 			dependencies = (
 			);
 			name = clone_whatsapp;
+			packageProductDependencies = (
+				88D75EBA2C35BF0000373A08 /* GoogleMaps */,
+			);
 			productName = clone_whatsapp;
 			productReference = 881FF9682C14D47000056880 /* clone_whatsapp.app */;
 			productType = "com.apple.product-type.application";
@@ -150,6 +158,9 @@
 				Base,
 			);
 			mainGroup = 881FF95F2C14D47000056880;
+			packageReferences = (
+				88D75EB92C35BF0000373A08 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
+			);
 			productRefGroup = 881FF9692C14D47000056880 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -193,6 +204,7 @@
 				88CF6ECD2C20AB6A0004FC57 /* RightViewCell.swift in Sources */,
 				883C83A32C219A7900AB1F19 /* Message.swift in Sources */,
 				889ED5172C29EA2100DB9B73 /* RightImageViewCell.swift in Sources */,
+				8845B0962C35C0D7004C3F73 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +358,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = clone_whatsapp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "The app needs your location.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app needs your location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -373,6 +387,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = clone_whatsapp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "The app needs your location.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app needs your location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -413,6 +429,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		88D75EB92C35BF0000373A08 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		88D75EBA2C35BF0000373A08 /* GoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88D75EB92C35BF0000373A08 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMaps;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 881FF9602C14D47000056880 /* Project object */;
 }
