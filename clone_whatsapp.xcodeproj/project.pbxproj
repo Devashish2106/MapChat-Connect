@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8802F9112C368DB900CBA3A2 /* GooglePlaces in Frameworks */ = {isa = PBXBuildFile; productRef = 8802F9102C368DB900CBA3A2 /* GooglePlaces */; };
+		8802F9152C36992900CBA3A2 /* key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8802F9142C36992900CBA3A2 /* key.swift */; };
 		881FF96C2C14D47000056880 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF96B2C14D47000056880 /* AppDelegate.swift */; };
 		881FF96E2C14D47000056880 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF96D2C14D47000056880 /* SceneDelegate.swift */; };
 		881FF9702C14D47000056880 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF96F2C14D47000056880 /* ViewController.swift */; };
@@ -31,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8802F9142C36992900CBA3A2 /* key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = key.swift; sourceTree = "<group>"; };
 		881FF9682C14D47000056880 /* clone_whatsapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clone_whatsapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		881FF96B2C14D47000056880 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		881FF96D2C14D47000056880 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88D75EBB2C35BF0000373A08 /* GoogleMaps in Frameworks */,
+				8802F9112C368DB900CBA3A2 /* GooglePlaces in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +103,7 @@
 				881FF97F2C14D67E00056880 /* CustomTableViewCell.swift */,
 				881FF9712C14D47000056880 /* Main.storyboard */,
 				8845B0952C35C0D7004C3F73 /* MapViewController.swift */,
+				8802F9142C36992900CBA3A2 /* key.swift */,
 				88D885572C2AE9AA0099A5E9 /* LeftImageViewCell.swift */,
 				889ED5162C29EA2100DB9B73 /* RightImageViewCell.swift */,
 				88CF6ECC2C20AB6A0004FC57 /* RightViewCell.swift */,
@@ -129,6 +134,7 @@
 			name = clone_whatsapp;
 			packageProductDependencies = (
 				88D75EBA2C35BF0000373A08 /* GoogleMaps */,
+				8802F9102C368DB900CBA3A2 /* GooglePlaces */,
 			);
 			productName = clone_whatsapp;
 			productReference = 881FF9682C14D47000056880 /* clone_whatsapp.app */;
@@ -160,6 +166,7 @@
 			mainGroup = 881FF95F2C14D47000056880;
 			packageReferences = (
 				88D75EB92C35BF0000373A08 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
+				8802F90F2C368DB900CBA3A2 /* XCRemoteSwiftPackageReference "ios-places-sdk" */,
 			);
 			productRefGroup = 881FF9692C14D47000056880 /* Products */;
 			projectDirPath = "";
@@ -201,6 +208,7 @@
 				881FF96E2C14D47000056880 /* SceneDelegate.swift in Sources */,
 				88D885582C2AE9AA0099A5E9 /* LeftImageViewCell.swift in Sources */,
 				881FF98A2C14D77100056880 /* EditViewController.swift in Sources */,
+				8802F9152C36992900CBA3A2 /* key.swift in Sources */,
 				88CF6ECD2C20AB6A0004FC57 /* RightViewCell.swift in Sources */,
 				883C83A32C219A7900AB1F19 /* Message.swift in Sources */,
 				889ED5172C29EA2100DB9B73 /* RightImageViewCell.swift in Sources */,
@@ -431,6 +439,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8802F90F2C368DB900CBA3A2 /* XCRemoteSwiftPackageReference "ios-places-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-places-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		88D75EB92C35BF0000373A08 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
@@ -442,6 +458,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8802F9102C368DB900CBA3A2 /* GooglePlaces */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8802F90F2C368DB900CBA3A2 /* XCRemoteSwiftPackageReference "ios-places-sdk" */;
+			productName = GooglePlaces;
+		};
 		88D75EBA2C35BF0000373A08 /* GoogleMaps */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 88D75EB92C35BF0000373A08 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
