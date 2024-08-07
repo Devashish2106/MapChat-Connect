@@ -36,23 +36,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-//    @IBSegueAction func dspvc(_ coder: NSCoder) -> DisplayViewController? {
-//        let vc =  DisplayViewController(coder: coder)
-//        
-//        if let indexpath = tableView.indexPathForSelectedRow{
-//            let inf = infos[indexpath.row]
-//            print(inf)
-//            vc?.a = inf
-//        }
-//        
-//        vc?.delegate = self
-//        
-//        vc?.modalPresentationStyle = .fullScreen
-//        
-//        
-//        return vc
-//    }
-    
     
     @IBSegueAction func dspCVC(_ coder: NSCoder) -> ChatViewController? {
         let vc = ChatViewController(coder: coder)

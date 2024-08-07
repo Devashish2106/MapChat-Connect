@@ -366,6 +366,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = clone_whatsapp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "MapChat Connect";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "The app needs your location.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app needs your location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -395,6 +396,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = clone_whatsapp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "MapChat Connect";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "The app needs your location.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app needs your location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
